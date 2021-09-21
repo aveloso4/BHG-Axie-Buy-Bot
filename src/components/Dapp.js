@@ -100,13 +100,13 @@ class DApp extends Component {
       message : 'please wait...'
     })
     
-    let nonce = await roninweb3.eth.getTransactionCount(walletAddress)
+    
     let tx = {
       from          : walletAddress,
       to            : marketAddress,
       data          : marketContract.methods.settleAuction(this.state.ownerAddress, wethAddress, this.state.price, this.state.listIndex, this.state.listState).encodeABI(),
-      gasPrice      : roninweb3.utils.toWei(0, 'Gwei'),
-      nonce         : nonce,
+      gasPrice      : 0,
+      nonce         : await roninweb3.eth.getTransactionCount(walletAddress),
       chainID       : 2020,
       gas           : 100000,
     }
