@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.4.20+commit.3155dd80"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "reclaimEther",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"author": "Remco Bloemen <remco@2π.com>",
+			"methods": {
+				"reclaimEther()": {
+					"details": "Transfer all Ether held by the contract to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				}
+			},
+			"title": "Contracts that should not own Ether"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/2_Owner.sol": "HasNoEther"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2_Owner.sol": {
+			"keccak256": "0xc45f469a2578f547fa930f782a07f40cffed04e1ce229505cc2a02d51822b7fd",
+			"urls": [
+				"bzzr://71bb4589a91c453b9bb5c0c6482aa32f5e423a794856f818f4781407777a3bc9"
+			]
+		}
+	},
+	"version": 1
+}

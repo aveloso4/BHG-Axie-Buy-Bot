@@ -1,0 +1,139 @@
+{
+	"compiler": {
+		"version": "0.4.20+commit.3155dd80"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Pause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Unpause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"pause()": {
+					"details": "called by the owner to pause, triggers stopped state"
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				},
+				"unpause()": {
+					"details": "called by the owner to unpause, returns to normal state"
+				}
+			},
+			"title": "Pausable"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/2_Owner.sol": "Pausable"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2_Owner.sol": {
+			"keccak256": "0xc45f469a2578f547fa930f782a07f40cffed04e1ce229505cc2a02d51822b7fd",
+			"urls": [
+				"bzzr://71bb4589a91c453b9bb5c0c6482aa32f5e423a794856f818f4781407777a3bc9"
+			]
+		}
+	},
+	"version": 1
+}

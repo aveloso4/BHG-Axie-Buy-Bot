@@ -1,0 +1,496 @@
+{
+	"compiler": {
+		"version": "0.4.20+commit.3155dd80"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAuctionWhenPaused",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "auctions",
+				"outputs": [
+					{
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"name": "startingPrice",
+						"type": "uint128"
+					},
+					{
+						"name": "endingPrice",
+						"type": "uint128"
+					},
+					{
+						"name": "duration",
+						"type": "uint64"
+					},
+					{
+						"name": "startedAt",
+						"type": "uint64"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "bid",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getCurrentPrice",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAuction",
+				"outputs": [
+					{
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"name": "startingPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "endingPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "duration",
+						"type": "uint256"
+					},
+					{
+						"name": "startedAt",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ownerCut",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAuction",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "_startingPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "_endingPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"name": "createAuction",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "reclaimEther",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_ownerCut",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_startingPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_endingPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_duration",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_seller",
+						"type": "address"
+					}
+				],
+				"name": "AuctionCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_totalPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "_winner",
+						"type": "address"
+					}
+				],
+				"name": "AuctionSuccessful",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Pause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Unpause",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"bid(address,uint256)": {
+					"details": "Bids on an open auction, completing the auction and transferring  ownership of the NFT if enough Ether is supplied.",
+					"params": {
+						"_nftAddress": "- address of a deployed contract implementing  the Nonfungible Interface.",
+						"_tokenId": "- ID of token to bid on."
+					}
+				},
+				"cancelAuction(address,uint256)": {
+					"details": "Cancels an auction that hasn't been won yet.  Returns the NFT to original owner.",
+					"params": {
+						"_nftAddress": "- Address of the NFT.",
+						"_tokenId": "- ID of token on auction"
+					}
+				},
+				"cancelAuctionWhenPaused(address,uint256)": {
+					"details": "Cancels an auction when the contract is paused.  Only the owner may do this, and NFTs are returned to  the seller. This should only be used in emergencies.",
+					"params": {
+						"_nftAddress": "- Address of the NFT.",
+						"_tokenId": "- ID of the NFT on auction to cancel."
+					}
+				},
+				"createAuction(address,uint256,uint256,uint256,uint256)": {
+					"details": "Creates and begins a new auction.",
+					"params": {
+						"_duration": "- Length of time to move between starting  price and ending price (in seconds).",
+						"_endingPrice": "- Price of item (in wei) at end of auction.",
+						"_nftAddress": "- address of a deployed contract implementing  the Nonfungible Interface.",
+						"_startingPrice": "- Price of item (in wei) at beginning of auction.",
+						"_tokenId": "- ID of token to auction, sender must be owner."
+					}
+				},
+				"getAuction(address,uint256)": {
+					"details": "Returns auction info for an NFT on auction.",
+					"params": {
+						"_nftAddress": "- Address of the NFT.",
+						"_tokenId": "- ID of NFT on auction."
+					}
+				},
+				"getCurrentPrice(address,uint256)": {
+					"details": "Returns the current price of an auction.",
+					"params": {
+						"_nftAddress": "- Address of the NFT.",
+						"_tokenId": "- ID of the token price we are checking."
+					}
+				},
+				"pause()": {
+					"details": "called by the owner to pause, triggers stopped state"
+				},
+				"reclaimEther()": {
+					"details": "Transfer all Ether held by the contract to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				},
+				"unpause()": {
+					"details": "called by the owner to unpause, returns to normal state"
+				}
+			},
+			"title": "Clock auction for non-fungible tokens."
+		},
+		"userdoc": {
+			"methods": {
+				"cancelAuction(address,uint256)": {
+					"notice": "This is a state-modifying function that can  be called while the contract is paused."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/2_Owner.sol": "AxieClockAuction"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2_Owner.sol": {
+			"keccak256": "0xc45f469a2578f547fa930f782a07f40cffed04e1ce229505cc2a02d51822b7fd",
+			"urls": [
+				"bzzr://71bb4589a91c453b9bb5c0c6482aa32f5e423a794856f818f4781407777a3bc9"
+			]
+		}
+	},
+	"version": 1
+}
