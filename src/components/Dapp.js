@@ -36,7 +36,6 @@ class DApp extends Component {
     }
   }
   async componentWillMount(){
-    
   }
 
   async getValue(){
@@ -100,7 +99,6 @@ class DApp extends Component {
     this.setState({
       message : 'please wait...'
     })
-    
     
     let tx = {
       from          : walletAddress,
