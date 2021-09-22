@@ -2,11 +2,11 @@
 
 
 ## Step 1 Get Detail data from GrahpQL request
-The software developed in this repository will work as a bot to buy NFTs By specific token's IDin the Axie marketplace.
+The software developed in this repository will work as a bot to buy NFTs By specific token's iD in the Axie marketplace.
 
-Not only Buying but also Bot get token's properties for example token's price and class, breedcount and states.
+Not only Buying but also Bot gets token's properties, for example, token's price and class, breed count and states.
 
-This bot get detailed data of Axie infinity marketplace from GraphGL request with query.
+This bot gets detailed data of Axie infinity marketplace from GraphGL request with query.
 
         var endpoint = 'https://graphql-gateway.axieinfinity.com/graphql'
 
@@ -22,7 +22,7 @@ This bot get detailed data of Axie infinity marketplace from GraphGL request wit
         }))
 
 ## Step 1 With detail data Buy tokens
-And then With this data, Call Axie Market smart contract's settlleAuction function
+And then With this data, Call Axie Market smart contract's settleAuction function.
 
         marketContract.methods.settleAuction(this.state.ownerAddress, wethAddress, this.state.price, this.state.listIndex, this.state.listState)
 
