@@ -165,21 +165,32 @@ class DApp extends Component {
         <br/><br/><br/><br/><br/><br/>
         <h2> Please Input Token ID </h2><hr/>
         <br/>
-        <InputGroup className="mb-3 "  style = {{height : '5%'}}> 
-        <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '4%', paddingRight : '4%'}}><MdInput />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Axie ID  </InputGroup.Text>
-          <FormControl
-            placeholder="input token id"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            defaultValue = {this.state.tokenId}
-            value = {this.state.tokenID}
-            onChange={handleTokenID}
-          />
-          <Button variant="primary" id="button-addon2"  onClick={()=>this.information()} style = {{paddingLeft : '4%', paddingRight : '4%'}}>
-          &nbsp;&nbsp; <BiShoppingBag/>  &nbsp;&nbsp; &nbsp;&nbsp;Buy Token 
-          </Button> 
-         
-        </InputGroup><br/>
+   
+          
+        <div className = "row">
+          <div className="col-1"></div>
+          <div className="col-10">
+          <InputGroup className="mb-3 "  style = {{height : '5%'}}> 
+            <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '4%', paddingRight : '4%'}}><MdInput />&nbsp;&nbsp;&nbsp;&nbsp;   Axie ID  </InputGroup.Text>
+              <FormControl
+                placeholder="input token id"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                defaultValue = {this.state.tokenId}
+                value = {this.state.tokenID}
+                onChange={handleTokenID}
+                style = {{ width : '50%'}}
+              />
+              <Button variant="primary" id="button-addon2"  onClick={()=>this.information()} style = {{paddingLeft : '2%', paddingRight : '2%'}}>
+              &nbsp;&nbsp; <BiShoppingBag/>  &nbsp;&nbsp; &nbsp;&nbsp;Buy Token 
+              </Button> 
+            
+            </InputGroup>
+
+          </div>
+          <div className="col-1"></div>
+        </div>
+        <br/>
         <br/>
 
         <h2> Axie Property </h2><hr/><br/>

@@ -29,12 +29,6 @@ class App extends Component {
           <div className = "col-2"></div>
         </div>
       </div>
-
-
-
-       
-    
-      
     );
   }
 }
