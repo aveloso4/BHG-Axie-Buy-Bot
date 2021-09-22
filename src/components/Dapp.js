@@ -4,6 +4,14 @@ import Web3 from 'web3';
 import { Button , FormControl, InputGroup} from 'react-bootstrap';
 import { GraphQLClient } from 'graphql-request'
 import { ethers } from 'ethers';
+import { MdInput } from "react-icons/md";
+import { BiShoppingBag } from "react-icons/bi";
+import { GiAlienBug ,GiHealthPotion, GiSpeedometer,GiSwitchWeapon} from "react-icons/gi";
+import { FaBabyCarriage, FaRegAddressCard } from "react-icons/fa";
+import { IoPricetagOutline } from "react-icons/io5";
+import { BiUpArrowAlt } from "react-icons/bi";
+
+
 
 
 const roninweb3           = new Web3(new Web3.providers.HttpProvider("https://proxy.roninchain.com/free-gas-rpc"));
@@ -154,18 +162,11 @@ class DApp extends Component {
     }
     return (
       <div>
-        <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow"><br/><br/><br/>
-          <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href="http://www.dappuniversity.com/bootcamp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Axie Buy Bot
-          </a>
-        </nav><br/><br/><br/><br/>
-        <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">Axie ID</InputGroup.Text>
+        <br/><br/><br/><br/><br/><br/>
+        <h2> Please Input Token ID </h2><hr/>
+        <br/>
+        <InputGroup className="mb-3 "  style = {{height : '5%'}}> 
+        <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '4%', paddingRight : '4%'}}><MdInput />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Axie ID  </InputGroup.Text>
           <FormControl
             placeholder="input token id"
             aria-label="Recipient's username"
@@ -174,93 +175,106 @@ class DApp extends Component {
             value = {this.state.tokenID}
             onChange={handleTokenID}
           />
-          <Button variant="primary" id="button-addon2"  onClick={()=>this.information()}>
-                Buy 
+          <Button variant="primary" id="button-addon2"  onClick={()=>this.information()} style = {{paddingLeft : '4%', paddingRight : '4%'}}>
+          &nbsp;&nbsp; <BiShoppingBag/>  &nbsp;&nbsp; &nbsp;&nbsp;Buy Token 
           </Button> 
          
         </InputGroup><br/>
-        <br/><br/>
+        <br/>
 
-        <h2> Axie Property </h2>
-        <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">class</InputGroup.Text>
-        <FormControl
-          placeholder="0"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-          value={this.state.classname}
-        />
-        </InputGroup>
-
-        <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">breedCount</InputGroup.Text>
-        <FormControl
-          placeholder="0"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-          value={this.state.breedCount}
-        />
-        </InputGroup>
-
-        <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">owner</InputGroup.Text>
-        <FormControl
-          placeholder="0"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-          value={this.state.ownerAddress}
-        />
-        </InputGroup>
-
+        <h2> Axie Property </h2><hr/><br/>
+        <div className = "row">
+          <div className="col-6">
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '6%', paddingRight : '6%'}}><GiAlienBug/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Class Name</InputGroup.Text>
+              <FormControl
+                placeholder="0"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                value={this.state.classname}
+              />
+            </InputGroup>
+            <InputGroup className="mb-3"  >
+              <InputGroup.Text id="basic-addon1"  style = {{paddingLeft : '6%', paddingRight : '6%'}}><FaBabyCarriage/> &nbsp;&nbsp;&nbsp;&nbsp;  Breed Count</InputGroup.Text>
+              <FormControl
+                placeholder="0"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                value={this.state.breedCount}
+              />
+            </InputGroup>
+          </div>
+          <div className="col-6">
           <InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">price</InputGroup.Text>
-          <FormControl
-            placeholder="0"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={this.state.price / 1000000000000000000}
-          />
-          </InputGroup>
+            <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '5%', paddingRight : '5%'}}><FaRegAddressCard/> &nbsp;&nbsp;&nbsp; Owner Address</InputGroup.Text>
+            <FormControl
+              placeholder="0"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              value={this.state.ownerAddress}
+            />
+            </InputGroup>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '5%', paddingRight : '5%'}}>  &nbsp;<IoPricetagOutline/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Token &nbsp;Price</InputGroup.Text>
+              <FormControl
+                placeholder="0"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                value={this.state.price / 1000000000000000000}
+              />
+              </InputGroup>
+          </div>
+        </div>
+       
 
-          <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">health</InputGroup.Text>
-        <FormControl
-            placeholder="0"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={this.state.health}
-          />
-        </InputGroup>
-
-          <InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">speed</InputGroup.Text>
-          <FormControl
-            placeholder="0"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={this.state.speed}
-          />
-          </InputGroup>
-          
-          <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">morale</InputGroup.Text>
-        <FormControl
-            placeholder="0"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={this.state.morale}
-          />
-        </InputGroup>
-
-          <InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">skill</InputGroup.Text>
-          <FormControl
-            placeholder="0"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={this.state.skill}
-          />
-          </InputGroup>
+          <br/><br/>
+          <h2> Axie States  </h2><hr/><br/>
+          <div className = "row">
+            <div className="col-3">
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1"  style = {{paddingLeft : '10%', paddingRight : '10%'}}><GiHealthPotion/> &nbsp;  Health</InputGroup.Text>
+            <FormControl
+                placeholder="0"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                value={this.state.health}
+              />
+            </InputGroup>
+            </div>
+            <div className="col-3">
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '10%', paddingRight : '10%'}}><GiSpeedometer/>&nbsp;   Speed</InputGroup.Text>
+            <FormControl
+              placeholder="0"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              value={this.state.speed}
+            />
+            </InputGroup>
+            </div>
+            <div className="col-3">
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '10%', paddingRight : '10%'}}><BiUpArrowAlt/>&nbsp;  Morale</InputGroup.Text>
+            <FormControl
+                placeholder="0"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                value={this.state.morale}
+              />
+            </InputGroup>
+            </div>
+            <div className="col-3">
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1" style = {{paddingLeft : '10%', paddingRight : '10%'}}><GiSwitchWeapon/>&nbsp;  Skill</InputGroup.Text>
+            <FormControl
+              placeholder="0"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              value={this.state.skill}
+            />
+            </InputGroup>
+            </div>
+          </div>
       </div>
     );
   }
