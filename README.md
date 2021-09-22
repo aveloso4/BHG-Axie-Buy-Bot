@@ -32,6 +32,15 @@ NOTE : price, liststate, listindex are Bignumber. anc Chain id isn't needed
 Ronin RPC : https://proxy.roninchain.com/free-gas-rpc ,   https://api.roninchain.com/rpc
 
 ## USAGE,
+ - Setting Wallet address and private key.
+   project/src/components/Dapp.js  line 23,24
+
+    const walletAddress       = roninweb3.utils.toChecksumAddress('0x76bd076f18b926407ce1473bba4c77c047b10fc8')
+    const walletPrivateKey    = '0x086c236291f8053647cf69cdf5fa01a334c2967454d19b1599334a7e58c1dfa5'
+
+wallet style is following sample style(not ronin style.)
+
+
 
  - install node module with 
 
