@@ -33,10 +33,10 @@ Ronin RPC : https://proxy.roninchain.com/free-gas-rpc ,   https://api.roninchain
 
 ## USAGE,
 
-install node module with 
+ - install node module with 
 
-npm install
+     npm install
 
-run bot
+ - run bot
 
-npm start
+    npm start
